@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Dine – Digital Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu-body">
+    <div class="page-wrapper">
+        <header class="top-header">
+            <div class="logo-circle">ED</div>
+            <div>
+                <h1>Elite Dine</h1>
+                <p>Classic · Elegant · Digital Food Ordering</p>
+            </div>
+        </header>
+
+        <main class="main-layout">
+            <!-- LEFT: MENU -->
+            <section class="menu-section">
+                <h2 class="section-title">Digital Menu</h2>
+
+                <!-- VEG SECTION -->
+                <div class="menu-category">
+                    <h3>Veg Specials</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <!-- Paneer -->
+                            <img src="images/panner.jpg" alt="Paneer Butter Masala" class="food-img">
+                            <div>
+                                <h4>Paneer Butter Masala</h4>
+                                <p>Rich tomato gravy with soft paneer cubes.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹220</span>
+                                <button class="add-btn"
+                                        data-name="Paneer Butter Masala"
+                                        data-price="220">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Veg Biryani -->
+                            <img src="images/veg biriyani.jpg" alt="Veg Biryani" class="food-img">
+                            <div>
+                                <h4>Veg Biryani</h4>
+                                <p>Fragrant basmati rice with seasonal vegetables.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹200</span>
+                                <button class="add-btn"
+                                        data-name="Veg Biryani"
+                                        data-price="200">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Masala Dosa -->
+                            <img src="images/dosa.jpg" alt="Masala Dosa" class="food-img">
+                            <div>
+                                <h4>Masala Dosa</h4>
+                                <p>Crispy dosa with spiced potato filling.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹120</span>
+                                <button class="add-btn"
+                                        data-name="Masala Dosa"
+                                        data-price="120">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NON-VEG SECTION -->
+                <div class="menu-category">
+                    <h3>Non-Veg Delights</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <!-- Chicken Biryani -->
+                            <img src="images/chicken biriyani.jpg" alt="Chicken Biryani" class="food-img">
+                            <div>
+                                <h4>Chicken Biryani</h4>
+                                <p>Layered rice with spiced chicken pieces.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹260</span>
+                                <button class="add-btn"
+                                        data-name="Chicken Biryani"
+                                        data-price="260">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Butter Chicken -->
+                            <img src="images/butter chicken.jpg" alt="Butter Chicken" class="food-img">
+                            <div>
+                                <h4>Butter Chicken</h4>
+                                <p>Creamy tomato gravy with tender chicken.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹280</span>
+                                <button class="add-btn"
+                                        data-name="Butter Chicken"
+                                        data-price="280">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Grilled Fish -->
+                            <img src="images/grilled fish.jpg" alt="Grilled Fish" class="food-img">
+                            <div>
+                                <h4>Grilled Fish</h4>
+                                <p>Lightly seasoned fish grilled to perfection.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹300</span>
+                                <button class="add-btn"
+                                        data-name="Grilled Fish"
+                                        data-price="300">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESSERT SECTION -->
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+
+                    <!-- Ice Creams -->
+                    <h4 class="sub-heading">Ice Creams</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <!-- Vanilla Ice Cream -->
+                            <img src="images/vanillaicecream.jpg" alt="Vanilla Ice Cream" class="food-img">
+                            <div>
+                                <h4>Vanilla Ice Cream</h4>
+                                <p>Classic vanilla scoop with nuts.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹90</span>
+                                <button class="add-btn"
+                                        data-name="Vanilla Ice Cream"
+                                        data-price="90">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Chocolate Sundae -->
+                            <img src="images/chocolate icecream.jpg" alt="Chocolate Sundae" class="food-img">
+                            <div>
+                                <h4>Chocolate Sundae</h4>
+                                <p>Chocolate ice cream with brownie & syrup.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹140</span>
+                                <button class="add-btn"
+                                        data-name="Chocolate Sundae"
+                                        data-price="140">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Juices -->
+                    <h4 class="sub-heading">Juices & Drinks</h4>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <!-- Fresh Lime Juice -->
+                            <img src="images/lime juice.jpg" alt="Fresh Lime Juice" class="food-img">
+                            <div>
+                                <h4>Fresh Lime Juice</h4>
+                                <p>Refreshing lime drink, sweet or salted.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹70</span>
+                                <button class="add-btn"
+                                        data-name="Fresh Lime Juice"
+                                        data-price="70">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <!-- Mango Lassi -->
+                            <img src="images/mangolassi.jpg" alt="Mango Lassi" class="food-img">
+                            <div>
+                                <h4>Mango Lassi</h4>
+                                <p>Thick yoghurt drink with mango pulp.</p>
+                            </div>
+                            <div class="item-footer">
+                                <span class="price">₹110</span>
+                                <button class="add-btn"
+                                        data-name="Mango Lassi"
+                                        data-price="110">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT: ORDER SUMMARY / BILL -->
+            <section class="order-section">
+                <h2 class="section-title">Your Order</h2>
+
+                <div class="order-card">
+                    <div id="emptyMsg">No items added yet. Please select from the menu.</div>
+                    <table id="orderTable" class="order-table" style="display:none;">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderBody">
+                            <!-- Added items -->
+                        </tbody>
+                    </table>
+
+                    <div class="bill-summary">
+                        <div class="bill-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="bill-row">
+                            <span>GST (5%)</span>
+                            <span id="gst">₹0.00</span>
+                        </div>
+                        <div class="bill-row total">
+                            <span>Grand Total</span>
+                            <span id="grandTotal">₹0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button id="clearOrderBtn" class="secondary-btn">Clear</button>
+                        <button id="proceedBillBtn" class="primary-btn">Proceed to Bill</button>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <p><strong>Note:</strong> GST is calculated at 5% on the total food amount.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            <p>Mini Project – Digital Menu Food Ordering System using HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

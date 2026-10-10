@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Dine – Final Bill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bill-body">
+    <div class="bill-wrapper">
+        <div class="bill-header">
+            <h1>Elite Dine</h1>
+            <p>Order Summary & GST Bill</p>
+        </div>
+
+        <div id="noBillMsg" style="display:none; text-align:center; font-size:13px; color:#777; margin: 18px 0;">
+            No bill data found. Please place an order from the menu page.
+            <br><br>
+            <a href="menu.html" style="color:#ff3b3b; text-decoration:none; font-weight:500;">Go to Menu</a>
+        </div>
+
+        <div id="billContent" style="display:none;">
+            <div class="bill-meta">
+                <span><strong>Date &amp; Time:</strong> <span id="billTime"></span></span>
+                <span><strong>Table No:</strong> 05</span>
+            </div>
+
+            <table class="bill-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="billBody">
+                    <!-- Filled by JS -->
+                </tbody>
+            </table>
+
+            <div class="bill-total-area">
+                <div class="bill-row-main">
+                    <span>Subtotal</span>
+                    <span id="billSubtotal">₹0.00</span>
+                </div>
+                <div class="bill-row-main">
+                    <span>GST (5%)</span>
+                    <span id="billGst">₹0.00</span>
+                </div>
+                <div class="bill-row-main total">
+                    <span>Grand Total</span>
+                    <span id="billTotal">₹0.00</span>
+                </div>
+            </div>
+
+            <div class="bill-actions">
+                <button class="secondary-btn" onclick="window.location.href='menu.html'">
+                    Back to Menu
+                </button>
+                <button class="primary-btn" onclick="window.print()">
+                    Print Bill
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Read bill data from localStorage
+        const dataStr = localStorage.getItem("elite_dine_bill");
+        const noBillMsg = document.getElementById("noBillMsg");
+        const billContent = document.getElementById("billContent");
+
+        if (!dataStr) {
+            noBillMsg.style.display = "block";
+        } else {
+            const data = JSON.parse(dataStr);
+            billContent.style.display = "block";
+
+            // Fill meta
+            document.getElementById("billTime").textContent = data.time || "";
+
+            const tbody = document.getElementById("billBody");
+            tbody.innerHTML = "";
+
+            data.items.forEach(item => {
+                const tr = document.createElement("tr");
+
+                const nameTd = document.createElement("td");
+                nameTd.textContent = item.name;
+                tr.appendChild(nameTd);
+
+                const qtyTd = document.createElement("td");
+                qtyTd.textContent = item.qty;
+                tr.appendChild(qtyTd);
+
+                const priceTd = document.createElement("td");
+                priceTd.textContent = "₹" + item.price.toFixed(2);
+                tr.appendChild(priceTd);
+
+                const amtTd = document.createElement("td");
+                amtTd.textContent = "₹" + item.amount.toFixed(2);
+                tr.appendChild(amtTd);
+
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById("billSubtotal").textContent = "₹" + data.subtotal.toFixed(2);
+            document.getElementById("billGst").textContent = "₹" + data.gst.toFixed(2);
+            document.getElementById("billTotal").textContent = "₹" + data.total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+<!-- ! IMPORTANT: Check the billing calculation -->
+
+<!-- ? TODO: Should we add GST here? -->
+
+<!-- TODO: Add customer address -->
+
+<!-- * Customer details section -->
+
+<!-- // This section is temporarily disabled -->
